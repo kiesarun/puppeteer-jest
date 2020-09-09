@@ -2,6 +2,7 @@ import HomePage from "../pages/HomePage"
 import LoginPage from "../pages/LoginPage"
 import FeedbackPage from "../pages/FeedbackPage"
 import TopBar from "../pages/components/TopBar"
+import { username, password } from "../config"
 
 describe('End-To-End Test', () => {
     let homePage
@@ -38,6 +39,6 @@ describe('End-To-End Test', () => {
         await topBar.isTopBarDisplayed()
         await topBar.clickSignInButton()
         await loginPage.isLoginFormDisplayed()
-        await loginPage.login("username", "password")
+        await loginPage.login(username, password)
     })
 })
